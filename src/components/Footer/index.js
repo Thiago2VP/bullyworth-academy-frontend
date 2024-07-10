@@ -1,9 +1,11 @@
 import React from 'react';
 
+import { MF } from './styled';
+
 export default function Footer() {
     return (
-        <footer>
-            <p>All rights reserved to Thiago2VP ©</p>
-        </footer>
+        <MF>
+            <p>No rights reserved to Thiago2VP ©</p>
+        </MF>
     );
 }
