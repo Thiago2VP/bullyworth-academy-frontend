@@ -50,7 +50,7 @@ export default createGlobalStyle`
   body .Toastify .Toastify__toast-container .Toastify__toast--error {
     background: ${colors.errorColor};
     color: ${colors.primaryColor};
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 `;
 
@@ -81,7 +81,7 @@ export const Form = styled.form`
 
   label {
     color: ${colors.gold};
-    font-size: 2.7rem;
+    font-size: 1.7rem;
     padding: 0.7rem;
     margin: auto;
   }
@@ -91,9 +91,9 @@ export const Form = styled.form`
     margin-top: 0.5rem;
     margin-left: -0.4rem;
     border-radius: 0.8rem;
-    height: 4.5rem;
+    height: 3rem;
     width: 30rem;
-    font-size: 2rem;
+    font-size: 1.4rem;
     border: 0.2rem solid ${colors.gold};
     color: ${colors.gold};
     background-color: ${colors.strongBlue};
@@ -120,10 +120,10 @@ export const Form = styled.form`
   button {
     display: block;
     text-align: center;
-    font-size: 1.7rem;
-    padding: 1rem;
-    margin: 1.5rem auto;
-    width: 15rem;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    margin: 1.2rem auto;
+    width: 10rem;
     color: ${colors.strongBlue};
     background-color: ${colors.gold};
     border-radius: 0.8rem;
@@ -142,13 +142,13 @@ export const Form = styled.form`
     padding-bottom: 3rem;
   }
   legend {
-    font-size: 3rem;
+    font-size: 1.7rem;
     color: ${colors.blue};
     padding: 1rem;
     margin: 1rem;
   }
 
-  @media (max-width: 350px) {
+  @media (max-width: 530px) {
     input {
       max-width: 19rem;
     }
@@ -157,6 +157,15 @@ export const Form = styled.form`
     }
     label {
       max-width: 19rem;
+    }
+  }
+
+  @media (max-width: 340px) {
+    input {
+      width: 95%;
+    }
+    label {
+      width: 95%;
     }
   }
 `;

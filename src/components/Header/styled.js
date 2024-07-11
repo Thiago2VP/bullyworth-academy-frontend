@@ -42,13 +42,7 @@ export const Logo = styled.div`
     text-align: center;
   }
 
-  @media (max-width: 420px) {
-    h1 {
-      font-size: 0;
-    }
-  }
-
-  @media (max-width: 300px) {
+  @media (max-width: 475px) {
     h1 {
       font-size: 0;
     }

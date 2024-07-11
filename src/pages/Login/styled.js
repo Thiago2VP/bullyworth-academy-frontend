@@ -16,7 +16,7 @@ export const QuestionRegist = styled.div`
   justify-content: center;
   color: ${strongBlue};
   p {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
   }
   a {
     text-decoration: underline;

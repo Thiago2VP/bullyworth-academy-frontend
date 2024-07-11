@@ -1,7 +1,7 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import { isEmail } from 'validator';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { get } from 'lodash';
 import { Link } from 'react-router-dom';
 
@@ -9,15 +9,11 @@ import { Container, Form } from '../../styles/GlobalStyles';
 import { SectionLogin, QuestionRegist } from './styled';
 import * as actions from '../../store/modules/auth/actions';
 
-// import Loading from '../../components/Loading';
-
 export default function Login(props) {
     const dispatch = useDispatch();
 
     const prevPath = get(props, 'location.state.prevPath', '/');
     const history = get(props, 'history');
-
-    const isLoading = useSelector((state) => state.auth.isLoading);
 
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
@@ -43,7 +39,6 @@ export default function Login(props) {
 
     return (
         <Container>
-
             <SectionLogin>
                 <Form onSubmit={handleSubmit}>
                     <label htmlFor="email">

@@ -30,7 +30,7 @@ function persistRehydrate({ payload }) {
 }
 
 function* registerRequest({ payload }) {
-    const { id, name, email, password, type, biography, media, photo, history } = payload;
+    const { id, name, email, password, type, biography, media, photo } = payload;
 
     try {
         if (id) {
@@ -60,7 +60,6 @@ function* registerRequest({ payload }) {
             });
             toast.success('Account successfuly created!');
             yield put(actions.registerCreatedSuccess({ email, name, password, type }));
-            history.push('/login');
         }
     } catch (e) {
         const errors = get(e, 'response.data.errors', []);
@@ -69,7 +68,6 @@ function* registerRequest({ payload }) {
         if (status === 401) {
             toast.error('You nedd to login again.');
             yield put(actions.loginFailure());
-            return history.push('/login');
         }
 
         if (errors.length > 0) {

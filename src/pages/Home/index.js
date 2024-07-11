@@ -11,7 +11,7 @@ export default function Home() {
                 <SectionWelcome>
                     <h1>Search for course</h1>
                     <SearchBox>
-                        <input type="text" placeholder="Procure pelo curso" />
+                        <input type="text" placeholder="Type the course name" />
                         <button>🔍</button>
                     </SearchBox>
                 </SectionWelcome>
