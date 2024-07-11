@@ -1,16 +1,20 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Routes as SelfRouter, Route } from 'react-router-dom';
 
-import MyRoute from './MyRoute';
+import AuthProps from './AuthProps';
 
 import Home from '../pages/Home';
 import Login from '../pages/Login';
 
 export default function Routes() {
     return (
-        <Switch>
-            <MyRoute exact path="/" component={Home} isClosed={false} />
-            <MyRoute exact path="/login/" component={Login} isClosed={false} />
-        </Switch>
+        <SelfRouter>
+            <Route exact path="/" element={<Home />} />
+            <Route
+                exact path="/login/"
+                element={<Login />}
+                loader={AuthProps(true)}
+            />
+        </SelfRouter>
     );
 }
